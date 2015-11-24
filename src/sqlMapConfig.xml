@@ -12,5 +12,5 @@
 			<property name="JDBC.Password" value="${password}"/>
 		</dataSource>
 	</transactionManager>
-	<sqlMap resource="/sql/boardSQL.xml"/>
+	<sqlMap resource="/struts.board.sql/boardSQL.xml"/>
 </sqlMapConfig>

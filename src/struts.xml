@@ -4,6 +4,8 @@
 <struts>
 	<constant name="struts.multipart.maxSize" value="104857600"></constant>
 	<package name="board" extends="struts-default">
-		
+		<action name="listAction" class="struts.board.action.ListAction">
+			<result>/board/boardList.jsp</result>
+		</action>
 	</package>
 </struts>

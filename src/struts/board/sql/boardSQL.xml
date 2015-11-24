@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC ".//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap>
+	<typeAlias alias="board" type="struts.board.bean.SboardDTO"/>
+		<resultMap class="board" id="boardRes">
+			<result property="no" 			column="no"/>
+			<result property="subject" 		column="subject"/>
+			<result property="name" 		column="name"/>
+			<result property="password" 	column="password"/>
+			<result property="content" 		column="content"/>
+			<result property="file_orgname" column="file_orgName"/>
+			<result property="file_savname" column="file_savName"/>
+			<result property="readhit" 		column="readhit"/>
+			<result property="regdate" 		column="regdate"/>
+		</resultMap>
+		
+		<sql id="select-all">
+			SELECT * FROM SBOARD
+		</sql>
+</sqlMap>
