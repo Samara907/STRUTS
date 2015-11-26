@@ -1,10 +1,12 @@
 package struts.board.action;
 
 import java.io.Reader;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
+import com.ibatis.sqlmap.client.SqlMapTransactionManager;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.interceptor.Interceptor;
@@ -26,8 +28,12 @@ public class ListAction implements Interceptor, ModelDriven<SboardDTO>{
 	private String pagingHtml;		// 페이징을 구현한 HTML
 
 	
-	public String execute() {
+	public String execute() throws SQLException {
 		
+
+		list 	   = sqlMapper.queryForList("board.selectAll");	// 모든 글을 가져와 list에 넣는다.
+		totalCount = list.size();								// 전체 글 갯수를 구한다.
+		page	   = new pagingac
 		return "success";
 	}
 	
