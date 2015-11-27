@@ -9,6 +9,7 @@
 		</interceptors>
 	
 		<action name="listAction" class="struts.board.action.ListAction">
+			<interceptor-ref name="ibatis"></interceptor-ref>
 			<result>/board/boardList.jsp</result>
 		</action>
 		
