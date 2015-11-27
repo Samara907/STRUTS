@@ -9,6 +9,7 @@ import com.ibatis.sqlmap.client.SqlMapClientBuilder;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.Interceptor;
 
+@SuppressWarnings("serial")
 public class IbatisInterceptor implements Interceptor{
 
 	public Reader reader;
